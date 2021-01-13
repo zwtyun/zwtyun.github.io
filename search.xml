@@ -44,9 +44,15 @@
 <p>写完后运行下面代码将文章渲染并部署到 GitHub Pages 上完成发布。以后每次发布文章都是一下几条命令命令。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo clean      #清理缓存</span><br><span class="line">$ hexo g          #生成页面</span><br><span class="line">$ hexo s          #预览页面</span><br><span class="line">$ hexo d          #部署发布</span><br></pre></td></tr></table></figure>
 <p>以上四条命令<strong>缺一不可</strong>。</p>
+<p>同时，如果运行以上四条命令后，博客首页<strong>没有更新</strong>，且有如下警告：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">warning: LF will be replaced by CRLF in tags&#x2F;index.html.</span><br><span class="line">The file will have its original line endings in your working directory</span><br></pre></td></tr></table></figure>
+<p>则表示 <strong>路径中存在 / 的符号转义问题 如：创建文章时命名为中文</strong>，一般都出现这个小问题。</p>
+<p>可在博客目录下 使用 Git bash ，输入如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git config --global core.autocrlf false</span><br></pre></td></tr></table></figure>
+<p>在重新生成文件部署即可</p>
 <h3 id="5-2-网站设置"><a href="#5-2-网站设置" class="headerlink" title="# 5.2 网站设置"></a># 5.2 网站设置</h3><p>我参考的是这篇博客 <a href="https://www.jianshu.com/p/3a05351a37dc">Hexo的Next主题的详细配置</a>，介绍的非常详细，有时间我也会来相机介绍一下 Next 主题的配置，以防丢失。</p>
 <p>另外推荐参考 <a href="https://hexo.io/zh-cn/docs/configuration">官方文档</a></p>
-<p><strong>注意：</strong>编写 .md 文件时，冒号后面都需要<strong>加上空格</strong>(后面编写代码行时也要注意，是<code> bashs ~~</code>bashs~~)</p>
+<p><strong>注意：</strong>编写 .md 文件时，冒号后面都需要<strong>加上空格</strong></p>
 <h3 id="5-3-更换主题"><a href="#5-3-更换主题" class="headerlink" title="# 5.3 更换主题"></a># 5.3 更换主题</h3><p>在 <a href="https://hexo.io/themes/">Themes|Hexo</a> 选择一个喜欢的主题，比如 NexT，进入网站目录打开 Git Bash Here 下载主题：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;iissnan&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
 <p>然后修改 _config.yml 中的 theme 为新主题名称 next，发布。（有的主题需要将 _config.yml 替换为主题自带的，参考主题说明。）</p>

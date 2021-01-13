@@ -65,6 +65,7 @@
 <h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>Hexo 是一种纯静态的博客，我们必须要在本地完成文章的编辑再部署到 GitHub 上，依赖于本地环境。不能像 WordPress 或 Typecho 那样的动态博客一样能直接在浏览器中完成撰文和发布。</p>
 <p>可以说是一种比较极客的写博客方式，但是优势也是明显的——免费稳定省心，比较适合爱折腾研究的用户，或者没有在线发文需求的朋友。</p>
 <h2 id="参考文档："><a href="#参考文档：" class="headerlink" title="参考文档："></a>参考文档：</h2><p><a href="https://www.jianshu.com/p/3a05351a37dc">Hexo的Next主题详细配置</a><br><a href="https://www.jianshu.com/p/56d99a3049a5">用Hexo写出第一篇博客</a><br><a href="https://blog.csdn.net/zemprogram/article/details/104288872">Hexo根目录下的_config.yml配置解释</a></p>
+<p>强烈推荐：<br><a href="https://blog.csdn.net/as480133937/article/details/100138838">Hexo-Next 主题博客个性化配置超详细，超全面</a></p>
 ]]></content>
       <categories>
         <category>Hexo</category>

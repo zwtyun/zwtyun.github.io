@@ -50,6 +50,7 @@
 <p>可在博客目录下 使用 Git bash ，输入如下命令：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git config --global core.autocrlf false</span><br></pre></td></tr></table></figure>
 <p>在重新生成文件部署即可</p>
+<p>若此时预览和部署仍然不同步，则使用 shift + F5 刷新，一般可解决问题。</p>
 <h3 id="5-2-网站设置"><a href="#5-2-网站设置" class="headerlink" title="# 5.2 网站设置"></a># 5.2 网站设置</h3><p>我参考的是这篇博客 <a href="https://www.jianshu.com/p/3a05351a37dc">Hexo的Next主题的详细配置</a>，介绍的非常详细，有时间我也会来相机介绍一下 Next 主题的配置，以防丢失。</p>
 <p>另外推荐参考 <a href="https://hexo.io/zh-cn/docs/configuration">官方文档</a></p>
 <p><strong>注意：</strong>编写 .md 文件时，冒号后面都需要<strong>加上空格</strong></p>

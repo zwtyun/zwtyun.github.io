@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-01-12T19:33:58.016Z</updated>
+  <updated>2021-01-13T03:12:22.237Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://example.com/2021/01/13/hello-world/"/>
-    <id>http://example.com/2021/01/13/hello-world/</id>
+    <title>使用Hexo + Github搭建个人博客</title>
+    <link href="http://example.com/2021/01/13/Hexo-create/"/>
+    <id>http://example.com/2021/01/13/Hexo-create/</id>
+    <published>2021-01-13T02:44:01.000Z</published>
+    <updated>2021-01-13T03:12:22.237Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;终于根据教程搭建完了自己的博客，那么作为第一篇博客，这里就介绍一下使用Hexo + Github搭建博客的过程，算是一个记录，也为之后需要帮助的人提供帮助。&lt;/p&gt;
+&lt;p&gt;这里就不介绍Hexo和Github了，直接进入正题&lt;/p&gt;
+&lt;h2 id=&quot;准备&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Hexo" scheme="http://example.com/categories/Hexo/"/>
+    
+    
+    <category term="博客， Github" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2%EF%BC%8C-Github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello world</title>
+    <link href="http://example.com/2021/01/13/Hello-world/"/>
+    <id>http://example.com/2021/01/13/Hello-world/</id>
     <published>2021-01-12T19:22:03.319Z</published>
-    <updated>2021-01-12T19:33:58.016Z</updated>
+    <updated>2021-01-13T02:42:47.758Z</updated>
     
     
       

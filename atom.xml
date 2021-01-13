@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-01-13T03:31:26.254Z</updated>
+  <updated>2021-01-13T04:21:01.318Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,46 +21,20 @@
     <link href="http://example.com/2021/01/13/Hexo-create/"/>
     <id>http://example.com/2021/01/13/Hexo-create/</id>
     <published>2021-01-13T02:44:01.000Z</published>
-    <updated>2021-01-13T03:31:26.254Z</updated>
+    <updated>2021-01-13T04:21:01.318Z</updated>
     
     
-      
-      
-        
-        
     <summary type="html">&lt;p&gt;终于根据教程搭建完了自己的博客，那么作为第一篇博客，这里就介绍一下使用Hexo + Github搭建博客的过程，算是一个记录，也为之后需要帮助的人提供帮助。(顺便用来练练手)&lt;/p&gt;
-&lt;p&gt;这里就不介绍Hexo和Github了，直接进入正题&lt;/p&gt;
-&lt;h2</summary>
-        
-      
+&lt;p&gt;这里就不介绍Hexo和Github了，直接进入正题&lt;/p&gt;</summary>
     
     
     
     <category term="Hexo" scheme="http://example.com/categories/Hexo/"/>
     
     
-    <category term="博客， Github" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2%EF%BC%8C-Github/"/>
+    <category term="博客" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2/"/>
     
-  </entry>
-  
-  <entry>
-    <title>Hello world</title>
-    <link href="http://example.com/2021/01/13/Hello-world/"/>
-    <id>http://example.com/2021/01/13/Hello-world/</id>
-    <published>2021-01-12T19:22:03.319Z</published>
-    <updated>2021-01-13T02:42:47.758Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;dfgsgfs的空间是分开计算两地分居公司 &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This 个首付大概三十公分但是干啥公司的公司ft. Check &lt;a</summary>
-        
-      
-    
-    
-    
+    <category term="Github" scheme="http://example.com/tags/Github/"/>
     
   </entry>
   

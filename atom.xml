@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-01-13T06:26:02.860Z</updated>
+  <updated>2021-01-14T17:15:02.116Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2021/01/13/Hexo-create/"/>
     <id>http://example.com/2021/01/13/Hexo-create/</id>
     <published>2021-01-13T02:44:01.000Z</published>
-    <updated>2021-01-13T06:26:02.860Z</updated>
+    <updated>2021-01-14T17:15:02.116Z</updated>
     
     
     <summary type="html">&lt;p&gt;终于根据教程搭建完了自己的博客，那么作为第一篇博客，这里就介绍一下使用Hexo + Github搭建博客的过程，算是一个记录，也为之后需要帮助的人提供帮助。(顺便用来练练手)&lt;/p&gt;

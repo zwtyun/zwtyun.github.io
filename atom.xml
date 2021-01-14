@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-01-14T17:15:02.116Z</updated>
+  <updated>2021-01-15T07:41:41.738Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vscode + cmake 对opencv + cpp 多文件工程进行编译调试</title>
+    <link href="http://example.com/2021/01/15/vscode_cmake/"/>
+    <id>http://example.com/2021/01/15/vscode_cmake/</id>
+    <published>2021-01-15T06:44:01.000Z</published>
+    <updated>2021-01-15T07:41:41.738Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;之前已经在ubuntu上搭建好了vscode + opencv + zbar 编译调试cpp文件的环境。不过经测试单单像之前一样配置完四个json文件，只能运行单个cpp文件工程，对多个cpp文件工程无能为力。为此，我经过研究得到如下方法。&lt;/p&gt;
+&lt;p&gt;在此之前，首先献上之前的c_cpp_properties，settings，tasks，launch，四json文件的相关配置：(tasks launch 最为重要)&lt;/p&gt;
+&lt;p&gt;c_cpp_properties:&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;quot;configurations&amp;quot;: [&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;quot;name&amp;quot;: &amp;quot;Linux&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;quot;includePath&amp;quot;: [&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &amp;quot;$&amp;#123;workspaceFolder&amp;#125;&amp;#x2F;**&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &amp;quot;&amp;#x2F;usr&amp;#x2F;local&amp;#x2F;include&amp;#x2F;opencv&amp;quot;, &amp;#x2F;&amp;#x2F;请确保你的opencv opencv2头文件夹安装在这个目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &amp;quot;&amp;#x2F;usr&amp;#x2F;local&amp;#x2F;include&amp;#x2F;opencv2&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &amp;quot;&amp;#x2F;usr&amp;#x2F;local&amp;#x2F;include&amp;#x2F;zbar&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &amp;quot;&amp;#x2F;usr&amp;#x2F;include&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            ],&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;quot;defines&amp;quot;: [],&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;quot;compilerPath&amp;quot;: &amp;quot;&amp;#x2F;usr&amp;#x2F;bin&amp;#x2F;gcc&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;quot;cStandard&amp;quot;: &amp;quot;c11&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;quot;cppStandard&amp;quot;: &amp;quot;c++17&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;quot;intelliSenseMode&amp;quot;: &amp;quot;clang-x64&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ],&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;quot;version&amp;quot;: 4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="环境搭建" scheme="http://example.com/categories/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+    
+    
+    <category term="vscode" scheme="http://example.com/tags/vscode/"/>
+    
+    <category term="cmake" scheme="http://example.com/tags/cmake/"/>
+    
+    <category term="opencv" scheme="http://example.com/tags/opencv/"/>
+    
+  </entry>
   
   <entry>
     <title>使用Hexo + Github搭建个人博客</title>

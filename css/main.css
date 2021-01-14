@@ -1865,7 +1865,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #14d23b;
+  background: #461fe9;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3048,6 +3048,13 @@ li.recent_posts_li {
 }
 .footer {
   bottom: auto;
+}
+body {
+  background: url("/images/4.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 .post {
   margin-top: 60px;

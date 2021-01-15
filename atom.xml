@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-01-15T07:41:41.738Z</updated>
+  <updated>2021-01-15T00:02:08.186Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>vscode + cmake 对opencv + cpp 多文件工程进行编译调试</title>
+    <title>vscode cpp 多文件工程进行编译调试</title>
     <link href="http://example.com/2021/01/15/vscode_cmake/"/>
     <id>http://example.com/2021/01/15/vscode_cmake/</id>
     <published>2021-01-15T06:44:01.000Z</published>
-    <updated>2021-01-15T07:41:41.738Z</updated>
+    <updated>2021-01-15T00:02:08.186Z</updated>
     
     
     <summary type="html">&lt;p&gt;之前已经在ubuntu上搭建好了vscode + opencv + zbar 编译调试cpp文件的环境。不过经测试单单像之前一样配置完四个json文件，只能运行单个cpp文件工程，对多个cpp文件工程无能为力。为此，我经过研究得到如下方法。&lt;/p&gt;
